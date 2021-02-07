@@ -6,16 +6,10 @@ public class FollowPlayer : MonoBehaviour
 {
     // public and private are access modifiers
     public GameObject player;
-    private Vector3 vector3;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        vector3 = transform.position;
-    }
+    [SerializeField] private Vector3 vector3;
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         // position ng camera = player position + yung original position ng camera para hindi mapunta sa 0,0,0 si camera
         //transform.position = player.transform.position + new Vector3(0, 5, -7); //new Vector3 is temporary 
